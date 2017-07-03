@@ -1,0 +1,33 @@
+header, main, footer {
+  padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
+#map {
+    width: 100%;
+    height: calc(100vh - 64px);
+}
+
+#pano {
+    width: 150px;
+    height: 150px;
+}
+
+.side-nav {
+    color: #000;
+}
+.collapsible li {
+    float: left !important;
+    display: block;
+    width: 100%;
+    line-height: unset !important;
+}
+.collapsible-header li:active {
+    background-color: #ccc;
+
+}

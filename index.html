@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Mapa do Bairro</title>
+</head>
+<body>
+    <header>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">
+                <i class="material-icons large">favorite</i>
+                <i class="material-icons large">location_city</i>
+            </a>
+
+                <div id="slide-out" class="side-nav fixed">
+                    <i class="material-icons center">search</i>
+                    <ul class="collapsible" data-collapsible="accordion">
+                        <li>
+                          <div class="collapsible-header active"><i class="material-icons">accessibility</i>Todos</div>
+                          <div class="collapsible-body">
+                              <ul data-bind="foreach: allLists">
+                                  <li data-bind="text: title, click: $parent.showMarker"></li>
+                              </ul>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">local_cafe</i>Cafés</div>
+                          <div class="collapsible-body">
+                              <ul data-bind="foreach: cafeList">
+                                  <li data-bind="text: title, click: $parent.showMarker"></li>
+                              </ul>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">restaurant</i>Restaurantes</div>
+                          <div class="collapsible-body">
+                              <ul data-bind="foreach: restaurantList">
+                                  <li data-bind="text: title, click: $parent.showMarker"></li>
+                              </ul>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">local_bar</i>Bares</div>
+                          <div class="collapsible-body">
+                              <ul data-bind="foreach: barList">
+                                  <li data-bind="text: title, click: $parent.showMarker"></li>
+                              </ul>
+                          </div>
+                        </li>
+                      </ul>
+                </div>
+
+            <a href="#" data-activates="slide-out" class="button-collapse">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+    </nav>
+</header>
+<main>
+    <div id="map"></div>
+</main>
+
+
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <script src="js/style.js"></script>
+    <script src="js/application.js"></script>
+    <script async defer
+     src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyBik6OgRa3aC_kuw-6yl4wuDN6mB_9rzsQ&callback=initMap">
+    </script>
+</body>
+</html>
