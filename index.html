@@ -46,8 +46,8 @@
                               </ul>
                           </div>
                         </li>
-                        <li>
-                          <div class="collapsible-header"><i class="material-icons">local_bar</i>Bares</div>
+                        <li data-bind="value: barList">
+                          <div class="collapsible-header" data-bind="click: showMarkers"><i class="material-icons">local_bar</i>Bares</div>
                           <div class="collapsible-body">
                               <ul data-bind="foreach: barList">
                                   <li data-bind="text: title, click: $parent.showMarker"></li>
@@ -73,7 +73,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
     <script src="js/style.js"></script>
-    <script src="js/application.js"></script>
+    <script src="js/apppp.js"></script>
     <script async defer
      src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyBik6OgRa3aC_kuw-6yl4wuDN6mB_9rzsQ&callback=initMap">
     </script>
