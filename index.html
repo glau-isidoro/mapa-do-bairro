@@ -42,12 +42,12 @@
                           <div class="collapsible-header"><i class="material-icons">restaurant</i>Restaurantes</div>
                           <div class="collapsible-body">
                               <ul data-bind="foreach: restaurantList">
-                                  <li data-bind="text: title, click: $parent.showMarker"></li>
+                                  <li data-bind="value: id, text: title, click: $parent.showMarker"></li>
                               </ul>
                           </div>
                         </li>
                         <li data-bind="value: barList">
-                          <div class="collapsible-header" data-bind="click: showMarkers"><i class="material-icons">local_bar</i>Bares</div>
+                          <div class="collapsible-header" data-bind=""><i class="material-icons">local_bar</i>Bares</div>
                           <div class="collapsible-body">
                               <ul data-bind="foreach: barList">
                                   <li data-bind="text: title, click: $parent.showMarker"></li>
