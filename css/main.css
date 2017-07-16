@@ -8,26 +8,47 @@ header, main, footer {
   }
 }
 
+#iwt h5 {
+    font-size: 1.2rem !important;
+}
+
+#fsq {
+    text-align: center;
+    line-height: 20px;
+}
+
 #map {
     width: 100%;
     height: calc(100vh - 64px);
 }
 
+#map .erro {
+    text-align: center;
+    margin-top: 50px;
+}
+
 #pano {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    min-width: 250px;
+    height: 250px;
 }
 
 .side-nav {
     color: #000;
 }
+
 .collapsible li {
     float: left !important;
     display: block;
     width: 100%;
     line-height: unset !important;
 }
+
 .collapsible-header li:active {
     background-color: #ccc;
+}
 
+.markers {
+    padding-left: 25px !important;
+    cursor: pointer;
 }
